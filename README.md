@@ -39,9 +39,9 @@ This is my personal portfolio website. It will include:
 ---
 
 ## 📬 Contact Me  
-- **Email:** saadnaikwade@example.com  
-- **LinkedIn:** [linkedin.com/in/saadnaikwade](#)  
-- **GitHub:** [github.com/saadnaikwade](#)  
+- **Email:** naikwadesaad@gmail.com  
+- **LinkedIn:** [linkedin.com/in/saad-naikwade](#)  
+- **GitHub:** [github.com/saadnaikwade1](#)  
 
 ---
 
