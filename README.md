@@ -40,8 +40,8 @@ This is my personal portfolio website. It will include:
 
 ## 📬 Contact Me  
 - **Email:** naikwadesaad@gmail.com  
-- **LinkedIn:** [linkedin.com/in/saad-naikwade](#)  
-- **GitHub:** [github.com/saadnaikwade1](#)  
+- **LinkedIn:** [linkedin.com/in/saad-naikwade](linkedin.com/in/saad-naikwade)  
+- **GitHub:** [github.com/saadnaikwade1](github.com/saadnaikwade1)  
 
 ---
 
