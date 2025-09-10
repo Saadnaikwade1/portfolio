@@ -39,10 +39,11 @@ This is my personal portfolio website. It will include:
 ---
 
 ## 📬 Contact Me  
-- **Email:** naikwadesaad@gmail.com  
-- **LinkedIn:** [linkedin.com/in/saad-naikwade](https://www.linkedin.com/in/saad-naikwade)  
-- **GitHub:** [github.com/saadnaikwade1](https://github.com/saadnaikwade1)  
- 
+[![Email](https://img.shields.io/badge/Email-naikwadesaad%40gmail.com-red?style=flat&logo=gmail)](mailto:naikwadesaad@gmail.com)  
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/saad-naikwade)  
+[![GitHub](https://img.shields.io/badge/GitHub-Profile-black?style=flat&logo=github)](https://github.com/saadnaikwade1)  
+
+
 
 ---
 
