@@ -31,7 +31,7 @@
   background-color: #f1f1f1;
 }
 nav:hover {
-  box-shadow: 2px 2px 5px #444343;
+  box-shadow: 3px 3px 8px #444343;
   transition: all 0.5s ease-in-out;
 }
 .navcon > nav {
@@ -88,19 +88,39 @@ nav div a > i {
 
 body.dark {
   background-color: #292c35;
-  position: relative;
 } /* #9b59b6 */
 
 body.dark h1,
-body.dark .support a {
+body.dark {
   color: #fff;
 }
-
 .checkbox {
   opacity: 0;
   position: absolute;
 }
+body.dark nav {
+  background-color: #111;
+}
+body.dark nav div a {
+  color: #f1f1f1;
+}
+body.dark .hero h3 {
+  color: #f4f4f4ab;
+}
+body.dark .herobtn button {
+  background-color: #fff;
+}
+body.dark .herobtn button a {
+  color: #121212;
+}
 
+body.dark .herobtn button:nth-child(2) {
+  background-color: #111;
+}
+body.dark .herobtn button:nth-child(2) a {
+  color: #f1f1f1;
+  transition: all 0.1s ease-in;
+}
 .checkbox-label {
   background-color: #111;
   width: 50px;
@@ -144,15 +164,61 @@ body.dark .support a {
   position: absolute;
   width: 100%;
   height: 70%;
-  border: 1px solid black;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 10px;
   align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .hero img {
   width: 130px;
   height: 150px;
   border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+.hero img:hover {
+  transform: scale(0.8, 0.8);
+  box-shadow: 5px 5px 2px #7081b5;
+}
+.hero h1 {
+  font-size: 60px;
+  font-weight: 700;
+  color: #121212;
+}
+.hero h3 {
+  font-size: 30px;
+  color: #444343;
+}
+.herobtn {
+  margin-top: 30px;
+  display: flex;
+  gap: 40px;
+}
+.herobtn button {
+  width: 200px;
+  height: 40px;
+  border-radius: 5px;
+}
+.herobtn button:first-child {
+  background-color: #111;
+}
+.herobtn button:first-child a {
+  color: #f1f1f1;
+  transition: all 0.1s ease-in-out;
+}
+
+.herobtn button a {
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: 700;
+  color: #121212;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.herobtn button a i {
+  margin-left: 5px;
+  font-size: 28px;
 }
