@@ -14,10 +14,11 @@
 .navcon {
   position: sticky;
   width: 100%;
-  height: 240px;
+  height: 150px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
+  font-family: "Montserrat", sans-serif;
 }
 .navcon nav {
   position: fixed;
@@ -35,62 +36,44 @@ nav:hover {
   box-shadow: 3px 3px 10px #4f4e4e;
   transition: all 0.5s ease-in-out;
 }
-.navcon > nav {
-  font-size: 30px;
+nav {
+  font-size: 25px;
 }
-
+nav .commnav {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 nav div a {
   text-decoration: none;
   font-size: 14px;
   font-weight: 400;
   color: #111;
 }
-nav div a:last-child {
-  transform: translateY(-8px);
-  transition: all 2s ease;
-  opacity: 0;
-  pointer-events: painted;
+
+.commnav a i {
+  font-size: 25px;
 }
-nav div a:hover {
-  transform: translateY(0px);
+.commnav a:first-child {
+  transition: all 1.2s ease;
+}
+
+.commnav:hover a:first-child {
+  transform: translateY(-5px);
+}
+.commnav a:last-child {
+  position: absolute;
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.commnav:hover a:last-child {
+  transform: translateY(15px);
   opacity: 1;
 }
 
-nav div a > i {
-  font-size: 22px;
-}
-.home {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.about {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.projects {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.Education {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.contact {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 /*  toggle icon */
 
 body.dark {
@@ -170,6 +153,7 @@ body.dark .herobtn button:nth-child(2) a {
 .hero {
   width: 100%;
   height: 70%;
+  margin-top: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -231,12 +215,8 @@ body.dark .herobtn button:nth-child(2) a {
 .herobtn a:last-child:hover {
   background-color: #ddd;
 }
-.line {
-  width: 60%;
-  padding-bottom: 50px;
-  border-bottom: 1px solid black;
-}
 
+/* about me section */
 .aboutme {
   width: 100%;
   padding: 100px 20%;
@@ -273,7 +253,35 @@ body.dark .aboutme p {
 body.dark .line {
   border-bottom: 1px solid #ffffffb1;
 }
+.aboutme .techstack {
+  padding-bottom: 100px;
+  width: 100%;
+  font-size: 150px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  padding: 0px;
+}
+.techstack span:first-child {
+  color: #070707c5;
+  transition: transform 2s ease-in, color 2s ease-in;
+}
+body.dark .techstack span:first-child {
+  color: #eae9e9c5;
+}
 
+.techstack span:nth-child(2) {
+  color: #c0c3cba1;
+  transition: transform 1s ease-in, color 2s ease-in;
+}
+body.dark .techstack span:last-child {
+  color: #464343;
+}
+.techstack:hover span:first-child,
+.techstack:hover span:nth-child(2) {
+  transform: scale(1.1);
+}
 .hamburger {
   display: none;
   font-size: 26px;
@@ -283,31 +291,82 @@ body.dark .line {
   right: 20px;
   z-index: 1100;
 }
+.skills {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.skills > .skillcon {
+  display: flex;
+  padding: auto;
+}
+.skills .skillcon .skilltxt {
+  display: flex;
+  flex-direction: column;
+}
+.skills .skillcon img {
+  width: 70%;
+  height: 80px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+.skilltxt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.skilltxt h1 {
+  font-size: 30px;
+  color: #1c1d1c;
+}
+.skilltxt p {
+  margin-top: -20px;
+  font-size: 20px;
+}
 
 @media only screen and (max-width: 600px) {
   .navcon {
-    margin-top: 60px;
+    height: 100px;
   }
   .navcon nav {
     display: none;
-    flex-direction: column;
     align-items: center;
-    width: 80%;
-    height: auto;
-    gap: 20px;
+    width: 90%;
+    gap: 10px;
     padding: 20px 40px;
   }
   .navcon.active nav {
+    transition: all 1s ease-in;
     display: flex;
-    background: #f1f1f1;
   }
   .hamburger {
     display: block;
   }
+  .hero h1:nth-child(2) {
+    font-size: 25px;
+  }
+  .hero h1:nth-child(3) {
+    font-size: 20px;
+  }
+  .hero h3 {
+    font-size: 15px;
+  }
+  .hero .herobtn a {
+    font-size: 12px;
+  }
+
   .aboutme {
-    padding: 10px;
+    min-width: fit-content;
+    /* margin-top: -; */
+    padding: 20px;
+  }
+  .aboutme h1 {
+    font-size: 30px;
   }
   .aboutme p {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
