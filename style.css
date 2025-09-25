@@ -243,16 +243,21 @@ body.dark .herobtn button:nth-child(2) a {
   font-weight: 600;
   color: #2591bb;
 }
-body.dark .aboutme p {
+body.dark .aboutme > p {
   color: #f1f1f1;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s forwards;
+  animation-delay: 0.3s;
 }
-.aboutme .line {
-  padding-top: 0px;
-  width: 100%;
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
-body.dark .line {
-  border-bottom: 1px solid #ffffffb1;
-}
+
 .aboutme .techstack {
   padding-bottom: 100px;
   width: 100%;
@@ -291,27 +296,39 @@ body.dark .techstack span:last-child {
   right: 20px;
   z-index: 1100;
 }
+
+/* tech stack */
 .skills {
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
   gap: 30px;
 }
-.skills > .skillcon {
+.skills .skillcon {
+  width: 45%;
   display: flex;
-  padding: auto;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #191817a5;
+  gap: 10px;
 }
 .skills .skillcon .skilltxt {
   display: flex;
   flex-direction: column;
 }
 .skills .skillcon img {
-  width: 70%;
+  width: 15%;
   height: 80px;
-  background-color: #fff;
-  border-radius: 10px;
+  padding: 5px;
+  transition: all 1s ease;
 }
+.skillcon:hover {
+  background-color: #191817;
+  box-shadow: 2px 2px 8px white;
+}
+
 .skilltxt {
   display: flex;
   flex-direction: column;
@@ -319,12 +336,12 @@ body.dark .techstack span:last-child {
   align-items: flex-start;
 }
 .skilltxt h1 {
-  font-size: 30px;
+  font-size: 25px;
   color: #1c1d1c;
 }
 .skilltxt p {
   margin-top: -20px;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 @media only screen and (max-width: 600px) {
