@@ -227,7 +227,7 @@ body.dark .herobtn button:nth-child(2) a {
   font-family: Arial, Helvetica, sans-serif;
 }
 .aboutme h1 {
-  font-size: 40px;
+  font-size: 90px;
   color: #121212;
   padding-bottom: 20px;
   font-weight: bold;
@@ -261,7 +261,7 @@ body.dark .aboutme > p {
 .aboutme .techstack {
   padding-bottom: 100px;
   width: 100%;
-  font-size: 150px;
+  font-size: 90px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -311,8 +311,9 @@ body.dark .techstack span:last-child {
   flex-wrap: wrap;
   align-items: center;
   justify-content: flex-start;
-  background-color: #191817a5;
+  background-color: #fff;
   gap: 10px;
+  border-radius: 5px;
 }
 .skills .skillcon .skilltxt {
   display: flex;
@@ -324,8 +325,23 @@ body.dark .techstack span:last-child {
   padding: 5px;
   transition: all 1s ease;
 }
+.skillcon {
+  background-color: #1c1c1e;
+  box-shadow: 2px 2px 5px #222222;
+  transition: all 1s ease;
+}
 .skillcon:hover {
-  background-color: #191817;
+  transform: translate(2rem, 1rem);
+}
+body.dark .skillcon {
+  background-color: #121212;
+  color: #fff;
+}
+body.dark .skillcon p {
+  color: #f1f1f1;
+}
+body.dark .skillcon:hover {
+  background-color: #121212;
   box-shadow: 2px 2px 8px white;
 }
 
@@ -344,6 +360,85 @@ body.dark .techstack span:last-child {
   font-size: 18px;
 }
 
+/* projects */
+.projects {
+  width: 100%;
+  padding: 0 20%;
+  font-family: Arial;
+}
+
+.projects > h1 {
+  width: 100px;
+  font-size: 90px;
+  color: #c9b9b91f;
+  font-weight: bold;
+  display: flex;
+}
+
+.projects > h1 span:first-child {
+  color: #9eaf5bc5;
+  transition: transform 2s ease-in;
+}
+
+.projects > h1 span:last-child {
+  color: rgb(95, 122, 91);
+  transition: transform 1s ease;
+}
+
+.projects > h1:hover span {
+  transform: scale(1.2);
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.projectimgcon {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  background-color: #97a197;
+  border-radius: 5px;
+  position: relative;
+  text-decoration: none;
+  color: #1c1c1e;
+  background-color: #fff;
+}
+.projectimgcon:hover {
+  background-color: #f1f1f1;
+}
+
+.projectimgcon img {
+  width: 25%;
+  height: 150px;
+  padding: 5px;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+.projectimgcon div i {
+  transform: rotate(40deg);
+  position: absolute;
+  right: 20px;
+  top: 30px;
+  transition: all 0.2s ease-in-out;
+}
+.projectimgcon:hover div i {
+  right: 10px;
+  top: 15px;
+  z-index: 10;
+}
+body.dark .projectimgcon {
+  color: #fff;
+  background-color: #222222;
+}
+body.dark .projectimgcon:hover {
+  background-color: #12121262;
+}
+body.dark .projectimgcon > i {
+  z-index: 12;
+}
 @media only screen and (max-width: 600px) {
   .navcon {
     height: 100px;
@@ -374,16 +469,41 @@ body.dark .techstack span:last-child {
   .hero .herobtn a {
     font-size: 12px;
   }
-
   .aboutme {
-    min-width: fit-content;
-    /* margin-top: -; */
-    padding: 20px;
+    padding: 10px;
   }
-  .aboutme h1 {
-    font-size: 30px;
+  #aboutme h1 {
+    gap: 10px;
+    justify-content: center;
+    font-size: 40px;
   }
   .aboutme p {
     font-size: 16px;
+  }
+  .skills {
+    flex-direction: column;
+  }
+  .skills .skillcon {
+    width: 100%;
+  }
+  .projects {
+    padding: 20px;
+  }
+  .projects h1 {
+    font-size: 35px;
+    transform: none;
+    padding: 0px;
+  }
+  .projectimgcon {
+    flex-direction: column;
+    padding: 20px;
+    background-color: #f1f1f1;
+  }
+
+  .projectimgcon img {
+    width: 70%;
+  }
+  .projectimgcon h1 {
+    font-size: 20px;
   }
 }
