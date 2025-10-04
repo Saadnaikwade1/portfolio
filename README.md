@@ -28,10 +28,10 @@ This is my personal portfolio website. It will include:
 
 - [x] Basic HTML structure created
 - [x] Added CSS & Bootstrap styling
-- [ ] Add JavaScript interactivity
-- [ ] Add projects section
-- [ ] Add contact form
-- [ ] Deploy live portfolio
+- [x] Add JavaScript interactivity
+- [x] Add projects section
+- [x] Add contact form
+- [x] Deploy live portfolio
 
 ---
 
