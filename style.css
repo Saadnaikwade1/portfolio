@@ -17,6 +17,7 @@
   font-family: "Montserrat", sans-serif;
   transition: background 0.2s linear;
   width: 100%;
+  position: relative;
 }
 
 .navcon {
@@ -170,16 +171,25 @@ body.dark .herobtn button:nth-child(2) a {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.hero img {
+.hero .img-container {
   width: 130px;
   height: 150px;
   border-radius: 10px;
-  transition: all 0.3s ease-in-out;
+  overflow: hidden; /* Prevents image from going out */
 }
-.hero img:hover {
-  transform: scale(0.8, 0.8);
+
+.hero .img-container img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  transition: all 0.5s ease-in-out;
+}
+
+.hero .img-container img:hover {
+  transform: scale(1.4, 1.3);
   box-shadow: 5px 5px 2px #7081b5;
 }
+
 .hero h1 {
   font-size: 60px;
   font-weight: 700;
@@ -396,7 +406,9 @@ body.dark .projects h1 span:nth-child(2) {
   position: relative;
   text-decoration: none;
   color: #1c1c1e;
-  z-index: -1;
+}
+.projectimgcon:hover {
+  background-color: #f1f1f1;
 }
 
 .projectimgcon img {
@@ -413,9 +425,10 @@ body.dark .projects h1 span:nth-child(2) {
   top: 30px;
   transition: all 0.2s ease-in-out;
 }
-.projectimgcon:hover div i {
+.projectimgcon:hover div > i {
   right: 10px;
   top: 15px;
+  font-size: large;
 }
 body.dark .projectimgcon {
   color: #fff;
@@ -642,42 +655,81 @@ button:hover {
   .hamburger {
     display: block;
   }
+  .hero {
+    margin-top: -30px;
+  }
   .hero h1:nth-child(2) {
-    font-size: 25px;
+    font-size: 24px;
   }
   .hero h1:nth-child(3) {
-    font-size: 20px;
+    font-size: 24px;
   }
   .hero h3 {
     font-size: 15px;
   }
   .hero .herobtn a {
-    font-size: 12px;
+    font-size: 14px;
   }
   .aboutme {
-    padding: 10px;
+    padding: 20px 20px;
   }
   #aboutme h1 {
-    gap: 10px;
+    gap: 5px;
     justify-content: center;
-    font-size: 40px;
+    font-size: 24px;
   }
-  .aboutme p {
-    font-size: 16px;
+  .aboutme > p {
+    font-size: 14px;
+    text-indent: 40px;
   }
   .skills {
-    flex-direction: column;
-  }
-  .skills .skillcon {
     width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-between;
+  }
+
+  .skills .skillcon {
+    width: 45%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  .skilltxt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+  }
+
+  .skills .skillcon img {
+    width: 50px;
+    height: 50px;
+    padding: 6px;
+    display: block;
+    box-shadow: 2px 2px 1px rgba(65, 4, 4, 0.201);
+    border-radius: 10%;
+  }
+
+  .skills .skillcon .skilltxt > h1 {
+    font-size: 16px !important;
+  }
+
+  .skills .skillcon .skilltxt > p {
+    font-size: 12px;
   }
   .projects {
     padding: 20px;
   }
-  .projects h1 {
-    font-size: 35px;
-    transform: none;
-    padding: 0px;
+  .projects > h1 {
+    font-size: 24px;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5px;
   }
   .projectimgcon {
     flex-direction: column;
@@ -686,9 +738,86 @@ button:hover {
   }
 
   .projectimgcon img {
-    width: 70%;
+    width: 90%;
   }
-  .projectimgcon h1 {
+  .projectimgcon > h1 {
     font-size: 20px;
+  }
+  .projectimgcon div h1 {
+    text-align: center;
+    font-size: 20px;
+  }
+  .projectimgcon div p {
+    font-size: 15px;
+    text-align: justify;
+    text-indent: 40px;
+    line-height: 18px;
+  }
+  .education {
+    width: 100%;
+    padding: 20px;
+  }
+  .eduheading {
+    font-size: 24px;
+    text-align: center;
+  }
+  .eduheading span:first-child {
+    text-decoration: none;
+    letter-spacing: 1px;
+  }
+  .eduheading span:last-child {
+    letter-spacing: normal;
+  }
+  .educon h2 {
+    font-size: 20px;
+  }
+  .educon p {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  .educon p:last-child {
+    color: #212122;
+    font-style: italic;
+  }
+  .contact {
+    padding: 20px;
+  }
+
+  .contact .contheading {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .contact form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .contact input,
+  .contact textarea {
+    width: 100%;
+    font-size: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .contact button {
+    width: 100%;
+    font-size: 16px;
+    padding: 12px;
+    margin-top: 10px;
+  }
+  .footer-content > p {
+    font-size: 12px;
+  }
+  .social-icons a img {
+    width: 20px;
+    height: 20px;
   }
 }
