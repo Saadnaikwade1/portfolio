@@ -371,71 +371,117 @@ body.dark .skillcon:hover {
   font-size: 18px;
 }
 
-/* projects */
+/* Projects Section */
 .projects {
   width: 100%;
   padding: 0 20%;
-  font-family: Arial;
+  font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
+
 .projects > h1 {
   font-size: 90px;
-  display: flex;
-  flex-direction: column;
+  font-weight: bold;
 }
+
 .projects h1 span:first-child {
   color: var(--primary-light);
 }
+
 .projects h1 span:nth-child(2) {
   color: var(--secondary-light);
 }
+
 body.dark .projects h1 span:first-child {
   color: var(--primary-dark);
 }
+
 body.dark .projects h1 span:nth-child(2) {
   color: var(--secondary-dark);
 }
+
+/* Project Card */
 .projectimgcon {
   display: flex;
-  gap: 10px;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  border-radius: 5px;
+  justify-content: center;
+  gap: 10px;
   position: relative;
   text-decoration: none;
   color: #1c1c1e;
-}
-.projectimgcon:hover {
-  background-color: #f1f1f1;
+  padding: 10px;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  background-color: #f9f9f9;
 }
 
-.projectimgcon img {
-  width: 25%;
-  height: 150px;
-  padding: 5px;
-  border-radius: 10px;
-  box-sizing: border-box;
+.projectimgcon:hover {
+  background-color: #f1f1f1;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
+
+/* Project Image */
+.projectimgcon img {
+  width: 100%;
+  max-width: 250px;
+  height: 150px;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.projectimgcon:hover img {
+  transform: scale(1.05);
+}
+
+/* Project Info Box */
+.projectimgcon div {
+  text-align: center;
+}
+
 .projectimgcon div i {
-  transform: rotate(40deg);
   position: absolute;
   right: 20px;
-  top: 30px;
-  transition: all 0.2s ease-in-out;
+  top: 20px;
+  font-size: 20px;
+  color: #007bff;
+  transition: all 0.3s ease-in-out;
 }
-.projectimgcon:hover div > i {
+
+.projectimgcon:hover div i {
+  transform: rotate(40deg);
   right: 10px;
   top: 15px;
-  font-size: large;
+  font-size: 22px;
 }
+
+.projectimgcon h1 {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.projectimgcon p {
+  font-size: 16px;
+  text-align: justify;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* Dark Mode */
 body.dark .projectimgcon {
   color: #fff;
   background-color: #222222;
 }
+
 body.dark .projectimgcon:hover {
   background-color: #12121262;
+}
+
+body.dark .projectimgcon p {
+  color: #f1f1f1;
 }
 /* education section */
 .education {
@@ -727,58 +773,79 @@ button:hover {
   }
   .projects > h1 {
     font-size: 24px;
-    flex-direction: row;
+    text-align: center;
     justify-content: center;
     gap: 5px;
   }
-  .projectimgcon {
-    flex-direction: column;
-    padding: 20px;
-    background-color: #f1f1f1;
-  }
 
-  .projectimgcon img {
-    width: 90%;
-  }
-  .projectimgcon > h1 {
-    font-size: 20px;
-  }
-  .projectimgcon div h1 {
-    text-align: center;
-    font-size: 20px;
-  }
-  .projectimgcon div p {
-    font-size: 15px;
-    text-align: justify;
-    text-indent: 40px;
-    line-height: 18px;
-  }
+  /* Education Section */
   .education {
     width: 100%;
     padding: 20px;
+    font-family: Arial, sans-serif;
   }
+
   .eduheading {
     font-size: 24px;
     text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
   }
+
   .eduheading span:first-child {
     text-decoration: none;
     letter-spacing: 1px;
   }
+
   .eduheading span:last-child {
     letter-spacing: normal;
+    color: #777;
   }
+
+  .educon {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    transition: background 0.3s ease-in-out;
+  }
+
+  .educon:hover {
+    background-color: #f1f1f1;
+  }
+
   .educon h2 {
     font-size: 20px;
+    margin-bottom: 5px;
+    color: #111;
   }
+
   .educon p {
     font-size: 14px;
     line-height: 1.4;
+    color: #444;
+    margin-bottom: 5px;
   }
+
   .educon p:last-child {
     color: #212122;
     font-style: italic;
   }
+
+  /* Dark Mode */
+  body.dark .educon {
+    background-color: #222222;
+  }
+
+  body.dark .educon:hover {
+    background-color: #12121262;
+  }
+
+  body.dark .educon h2,
+  body.dark .educon p {
+    color: #f1f1f1;
+  }
+
   .contact {
     padding: 20px;
   }
