@@ -318,6 +318,7 @@ body.dark .techstack span:nth-child(2) {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  
   gap: 30px;
 }
 .skills .skillcon {
@@ -374,17 +375,23 @@ body.dark .skillcon:hover {
 /* Projects Section */
 .projects {
   width: 100%;
-  padding: 0 20%;
+  max-width: 900px;
+  margin: 0 auto;
   font-family: Arial, sans-serif;
+
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
 .projects > h1 {
-  font-size: 90px;
-  font-weight: bold;
+  font-size: 48px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 10px;
 }
+
+
 
 .projects h1 span:first-child {
   color: var(--primary-light);
@@ -425,9 +432,9 @@ body.dark .projects h1 span:nth-child(2) {
 
 /* Project Image */
 .projectimgcon img {
-  width: 100%;
+  width: 50%;
   max-width: 250px;
-  height: 150px;
+  height: 100px;
   border-radius: 10px;
   object-fit: cover;
   transition: transform 0.3s ease-in-out;
@@ -459,7 +466,7 @@ body.dark .projects h1 span:nth-child(2) {
 }
 
 .projectimgcon h1 {
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 700;
 }
 
@@ -722,10 +729,10 @@ button:hover {
   #aboutme h1 {
     gap: 5px;
     justify-content: center;
-    font-size: 24px;
+    font-size: 20px;
   }
   .aboutme > p {
-    font-size: 14px;
+    font-size: 10px;
     text-indent: 40px;
   }
   .skills {
@@ -772,12 +779,18 @@ button:hover {
     padding: 20px;
   }
   .projects > h1 {
-    font-size: 24px;
+    font-size: 14px;
     text-align: center;
     justify-content: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     gap: 5px;
   }
-
+ .projectimgcon div h1{
+  font-size: 14px;
+}
+ .projectimgcon div p{
+  font-size: 10px;
+}
   /* Education Section */
   .education {
     width: 100%;
@@ -786,7 +799,7 @@ button:hover {
   }
 
   .eduheading {
-    font-size: 24px;
+    font-size: 18px;
     text-align: center;
     font-weight: bold;
     margin-bottom: 20px;
@@ -815,13 +828,13 @@ button:hover {
   }
 
   .educon h2 {
-    font-size: 20px;
+    font-size: 12px;
     margin-bottom: 5px;
     color: #111;
   }
 
   .educon p {
-    font-size: 14px;
+    font-size: 10px;
     line-height: 1.4;
     color: #444;
     margin-bottom: 5px;
